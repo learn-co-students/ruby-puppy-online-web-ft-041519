@@ -1,20 +1,20 @@
 class Dog
 
-  @all= []
+  @@all = []
 
   attr_accessor :name
 
-  def instantiate(name)
+  def initialize(name)
     @name = name
-    @all << name
+    @@all << self
   end
 
-  def clear_all
-    @all.clear
+  def self.clear_all
+    @@all.clear
   end
 
-  def all
-    @@all.each { |name| puts name }
+  def self.all
+    @@all.each { |dog| puts dog.name }
   end
 
 end
