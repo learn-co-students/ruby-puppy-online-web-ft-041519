@@ -2,21 +2,21 @@ require 'pry'
 
 class Dog
   
-  attr_accessor :dog
+  attr_accessor :name
   
   @@all = [] 
 
-  def self.new(name)
-    @@all << name 
-    @dog = name
+  def initialize(name)
+    @@all << self
+    @name = name
   end
 
   def self.clear_all
-    @@all = []
+    @@all.clear
   end
  
   def self.all
-    puts @@all
+    puts @@all.map{ |dog| dog.name } 
   end
   
 end 

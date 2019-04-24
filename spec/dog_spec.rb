@@ -38,9 +38,9 @@ describe "Dog" do
     end
   end
 
-  #describe "#name" do
-  #  it "has a name" do
-  #    expect(pluto.name).to eq("Pluto")
-  #  end
-  #end
+  describe "#name" do
+    it "has a name" do
+      expect(pluto.name).to eq("Pluto")
+    end
+  end
 end
